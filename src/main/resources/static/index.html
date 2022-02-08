@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+       function hallo() {
+
+           const url= "/?navn=" + $("#navn").val();
+           $.get(url,function (data) {
+               $("#hallo").html(data);
+           })
+        }
+
+
+    </script>
+
+</head>
+<body>
+Skriv inn navn: <input type="text" id="navn" />
+<button onclick="hallo();">Trykk meg!</button>
+
+<div id="hallo"></div>
+</body>
+</html>
